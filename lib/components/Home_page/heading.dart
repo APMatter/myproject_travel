@@ -22,6 +22,7 @@ class HeadingSection extends StatelessWidget {
               ),
               height: 50,
               width: 50,
+              
             ),
             SizedBox(
               width: small,

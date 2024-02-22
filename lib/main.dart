@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myproject_travel/pages/details_place.dart';
 import 'package:myproject_travel/pages/home_page.dart';
 
 void main() {

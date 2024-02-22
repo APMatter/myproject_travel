@@ -1,33 +1,43 @@
 import 'package:flutter/material.dart';
+import 'package:myproject_travel/pages/details_place.dart';
 import 'package:myproject_travel/utils/styles.dart';
 
 class CardInformation extends StatelessWidget {
-  const CardInformation({super.key});
+  const CardInformation({Key? key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Black,
-        borderRadius: BorderRadius.circular(26),
-        image: const DecorationImage(
-          image: AssetImage('accest/images/wat.jpeg'),
-          fit: BoxFit.cover,
-        ),
-      ),
-      height: 250,
-      width: 200,
+    return GestureDetector(
+      onTap: () {
+        // Navigate to another page when the card is tapped
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => DatailPlace()),
+        );
+      },
       child: Container(
-        decoration:  BoxDecoration(
+        decoration: BoxDecoration(
+          color: Black,
           borderRadius: BorderRadius.circular(26),
-          gradient: LinearGradient (colors : [Color.fromRGBO(0, 0, 0, 0.7),
-           Colors.transparent],
-           begin: Alignment.bottomCenter,
-           end: Alignment.topCenter),
+          image: const DecorationImage(
+            image: AssetImage('accest/images/wat.jpeg'),
+            fit: BoxFit.cover,
+          ),
         ),
-        child: Padding(
-          padding: EdgeInsets.only(left: small, bottom: small),
-          child: Column(
+        height: 250,
+        width: 200,
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(26),
+            gradient: LinearGradient(
+              colors: [Color.fromRGBO(0, 0, 0, 0.7), Colors.transparent],
+              begin: Alignment.bottomCenter,
+              end: Alignment.topCenter,
+            ),
+          ),
+          child: Padding(
+            padding: EdgeInsets.only(left: small, bottom: small),
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -38,15 +48,17 @@ class CardInformation extends StatelessWidget {
                       padding: const EdgeInsets.all(13.0),
                       child: Container(
                         decoration: BoxDecoration(
-                            color: whiteTranper,
-                            borderRadius: BorderRadius.circular(12)),
+                          color: whiteTranper,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
                         width: 68,
                         height: 36,
                         child: Center(
-                            child: Icon(
-                          Icons.star,
-                          color: Colors.orange,
-                        )),
+                          child: Icon(
+                            Icons.star,
+                            color: Colors.orange,
+                          ),
+                        ),
                       ),
                     )
                   ],
@@ -64,8 +76,25 @@ class CardInformation extends StatelessWidget {
                     )
                   ],
                 )
-              ]),
+              ],
+            ),
+          ),
         ),
+      ),
+    );
+  }
+}
+
+// Define another page widget here
+class AnotherPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Another Page'),
+      ),
+      body: Center(
+        child: Text('This is another page!'),
       ),
     );
   }
