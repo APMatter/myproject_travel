@@ -11,9 +11,9 @@ class MainCategory extends StatelessWidget {
       children: [
         _buildCategoryRow(),
         SizedBox(height: xsamll),
-        _buildPlacesRow('Place 1'),
+        _buildPlacesRow('cat 1'),
         SizedBox(height: xsamll),
-        _buildPlacesRow('Place 2'),
+        _buildPlacesRow('cat 2'),
       ],
     );
   }
