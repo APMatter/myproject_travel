@@ -85,17 +85,3 @@ class CardInformation extends StatelessWidget {
   }
 }
 
-// Define another page widget here
-class AnotherPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Another Page'),
-      ),
-      body: Center(
-        child: Text('This is another page!'),
-      ),
-    );
-  }
-}
