@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:myproject_travel/utils/styles.dart';
 
-class CardManageHotel extends StatelessWidget {
-  const CardManageHotel({Key? key}) : super(key: key);
+class CardManageTour extends StatelessWidget {
+  const CardManageTour({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -19,7 +19,7 @@ class CardManageHotel extends StatelessWidget {
               Container(
                 padding: EdgeInsets.only(left: 10),
                 child: Text(
-                  'Hotel1',
+                  'Place 1',
                   style: heading1,
                 ),
               ),

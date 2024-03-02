@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:myproject_travel/components/ManagePlaceHotel/AddHotel.dart';
-import 'package:myproject_travel/components/ManagePlaceHotel/LabelManageHotel.dart';
-import 'package:myproject_travel/components/ManagePlaceHotel/cardManageHotel.dart';
+import 'package:myproject_travel/components/ManageTour/AddTour.dart';
+import 'package:myproject_travel/components/ManageTour/CardManageTour.dart';
+import 'package:myproject_travel/components/ManageTour/LabelManageTour.dart';
 
-class ManageHotel extends StatelessWidget{
-  const ManageHotel ({super.key});
+class ManageTour extends StatelessWidget{
+  const ManageTour ({super.key});
 
   @override
   Widget build(BuildContext context){
-    return  Scaffold( 
+    return Scaffold( 
       body: SafeArea(child: SingleChildScrollView( 
         child: Column( 
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [ 
             Container( 
               padding:EdgeInsets.all(20),
-              child: LabelManageHotel(),),
+              child: LabelManageTour(),),
               Container(
                 padding: EdgeInsets.all(20),
-                child: CardManageHotel(),),
-                Container(child: AddHotel(),)
+                child: CardManageTour(),),
+                Container(child: AddTour(),)
 
               
                 

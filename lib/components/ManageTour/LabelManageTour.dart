@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:myproject_travel/utils/styles.dart';
 
-class LabelManageHotel extends StatelessWidget{
-  const LabelManageHotel({super.key});
+class LabelManageTour extends StatelessWidget{
+  const LabelManageTour({super.key});
 
   @override
   Widget build(BuildContext context){
@@ -12,7 +12,7 @@ class LabelManageHotel extends StatelessWidget{
         Container(
           child: Icon(Icons.arrow_back),),
           SizedBox(width: 5,),
-        Container(child: Text('Manage Hotel',style: heading1,))
+        Container(child: Text('Manage Tourist Attractions',style: heading1,))
       ],
     );
   }

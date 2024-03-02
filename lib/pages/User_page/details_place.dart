@@ -8,7 +8,7 @@ import 'package:myproject_travel/components/Details_page/head_details_section.da
 import 'package:myproject_travel/components/Details_page/label_map_section.dart';
 import 'package:myproject_travel/components/Details_page/map_pic_section.dart';
 import 'package:myproject_travel/components/Details_page/menu_map_section.dart';
-import 'package:myproject_travel/pages/home_page.dart';
+import 'package:myproject_travel/pages/User_page/home_page.dart';
 import 'package:myproject_travel/utils/styles.dart';
 
 class DatailPlace extends StatelessWidget {
