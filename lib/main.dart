@@ -5,6 +5,7 @@ import 'package:myproject_travel/pages/Admin_page/AddDetailPlace_hotel_page.dart
 import 'package:myproject_travel/pages/Admin_page/AddPlace.dart';
 import 'package:myproject_travel/pages/Admin_page/ManageHotel_page.dart';
 import 'package:myproject_travel/pages/Admin_page/ManageTour.dart';
+import 'package:myproject_travel/pages/User_page/Cat_shopping.dart';
 import 'package:myproject_travel/pages/User_page/FavPlace_page.dart';
 import 'package:myproject_travel/pages/User_page/HotelDetails.dart';
 import 'package:myproject_travel/pages/User_page/details_place.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:FavoritePlace (),
+      home:CategoryShop (),
 
     );
   }
