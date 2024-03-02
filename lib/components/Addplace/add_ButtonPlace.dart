@@ -9,6 +9,7 @@ class AddButton extends StatelessWidget {
     return Row(
       children: [
         Container(
+     
           height: 150,
           width: 150,
           decoration: BoxDecoration(

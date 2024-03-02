@@ -34,6 +34,7 @@ class AddPicSection extends StatelessWidget {
             child: Center(
               child: Icon(Icons.add),
             ),
+            
           ),
         ),
         

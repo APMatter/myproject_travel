@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myproject_travel/components/Details_page/head_details_section.dart';
+import 'package:myproject_travel/pages/Admin_page/AddDetailPlace_tour.dart';
 import 'package:myproject_travel/pages/Admin_page/AddDetailPlace_tour_page.dart';
 import 'package:myproject_travel/pages/Admin_page/AddPlace.dart';
 import 'package:myproject_travel/pages/Admin_page/ManageHotel_page.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:ManageHotel (),
+      home:AddPlaceDetailTour (),
 
     );
   }

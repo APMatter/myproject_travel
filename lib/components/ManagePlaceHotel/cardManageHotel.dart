@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 class CardManageHotel extends StatelessWidget {
   const CardManageHotel({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,

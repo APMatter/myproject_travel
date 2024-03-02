@@ -5,8 +5,8 @@ import 'package:myproject_travel/components/Addplace/add_ButtonPlace.dart';
 import 'package:myproject_travel/components/Addplace/label_AddPlace.dart';
 import 'package:myproject_travel/utils/styles.dart';
 
-class AddPlace extends StatelessWidget {
-  const AddPlace({super.key});
+class AddPlaceMain extends StatelessWidget {
+  const AddPlaceMain({super.key});
 
   @override
   Widget build(BuildContext context){
@@ -27,7 +27,7 @@ class AddPlace extends StatelessWidget {
               ),
             ),
             Container( 
-             
+             padding: EdgeInsets.only(left: 20),
               child:AddButton() ,
             ),
             
