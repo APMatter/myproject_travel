@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myproject_travel/components/UserInfo/user_info_card.dart';
 
-class HomePage extends StatelessWidget {
+class UserInfo extends StatelessWidget {
 
   // Define user information constants
   static const String user = "Apichai MATT";
