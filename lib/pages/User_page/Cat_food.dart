@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:myproject_travel/pages/User_page/home_page.dart';
 import 'package:myproject_travel/utils/styles.dart';
 
 class CategoryFood extends StatelessWidget {
   const CategoryFood({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,14 +16,16 @@ class CategoryFood extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Icon(Icons.arrow_back),
-                  SizedBox(
-                    width: small,
-                  ),
-                  Text(
-                    'Food and Drinks',
-                    style: heading1,
-                  )
+                  GestureDetector(
+                      onTap: () {
+                        // Navigate to another page when the card is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => HomePage()),
+                        );
+                      },
+                      child: Label())
                 ],
               ),
               Padding(
@@ -38,6 +40,23 @@ class CategoryFood extends StatelessWidget {
       )),
     );
   }
+}
+
+Widget Label() {
+  return Row(
+    children: [
+      Icon(
+        Icons.arrow_back,
+      ),
+      SizedBox(
+        width: small,
+      ),
+      Text(
+        'Food & Drinks',
+        style: heading1,
+      )
+    ],
+  );
 }
 
 Widget Card() {
@@ -56,7 +75,7 @@ Widget Card() {
             height: 170,
             width: 170,
             child: Image(
-              image: AssetImage('accest/images/wat.jpeg'),
+              image: AssetImage('accest/images/restaurant.jpg'),
               width: 100,
               height: 100,
               fit: BoxFit.cover,
@@ -69,7 +88,7 @@ Widget Card() {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Wat Rong Khun',
+                'Restaurant',
                 style: heading3,
               ),
               SizedBox(

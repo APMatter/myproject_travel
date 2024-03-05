@@ -112,12 +112,7 @@ class DatailPlace extends StatelessWidget {
         Container(
           child: MenuMap(),
         ),
-        Container(
-          child: CommentSection(),
-        ),
-        Container(
-          child: CommentBox(),
-        )
+       
       ]),
     )));
   }

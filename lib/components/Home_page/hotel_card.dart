@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myproject_travel/pages/User_page/HotelDetails.dart';
 import 'package:myproject_travel/utils/styles.dart';
 
 class HotelCard extends StatelessWidget {
@@ -6,28 +7,37 @@ class HotelCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Black,
-        borderRadius: BorderRadius.circular(26),
-        image: const DecorationImage(
-          image: AssetImage('accest/images/hotel.jpg'),
-          fit: BoxFit.cover,
-        ),
-      ),
-      height: 250,
-      width: 200,
+    return GestureDetector(
+     onTap: () {
+        // Navigate to the landmark page here
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => HotelDetail()),
+        );
+      },
       child: Container(
-        decoration:  BoxDecoration(
+        decoration: BoxDecoration(
+          color: Black,
           borderRadius: BorderRadius.circular(26),
-          gradient: LinearGradient (colors : [Color.fromRGBO(0, 0, 0, 0.7),
-           Colors.transparent],
-           begin: Alignment.bottomCenter,
-           end: Alignment.topCenter),
+          image: const DecorationImage(
+            image: AssetImage('accest/images/hotel.jpg'),
+            fit: BoxFit.cover,
+          ),
         ),
-        child: Padding(
-          padding: EdgeInsets.only(left: small, bottom: small),
-          child: Column(
+        height: 250,
+        width: 200,
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(26),
+            gradient: LinearGradient(
+              colors: [Color.fromRGBO(0, 0, 0, 0.7), Colors.transparent],
+              begin: Alignment.bottomCenter,
+              end: Alignment.topCenter,
+            ),
+          ),
+          child: Padding(
+            padding: EdgeInsets.only(left: small, bottom: small),
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -55,7 +65,7 @@ class HotelCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Ban Dum',
+                      'Wanason Resort',
                       style: pBold,
                     ),
                     Text(
@@ -64,7 +74,9 @@ class HotelCard extends StatelessWidget {
                     )
                   ],
                 )
-              ]),
+              ],
+            ),
+          ),
         ),
       ),
     );

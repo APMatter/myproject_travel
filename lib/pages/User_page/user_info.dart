@@ -1,14 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:myproject_travel/components/UserInfo/user_info_card.dart';
+import 'package:myproject_travel/pages/User_page/FavPlace_page.dart';
+import 'package:myproject_travel/pages/User_page/home_page.dart';
 
-class UserInfo extends StatelessWidget {
 
+class UserInfo extends StatefulWidget {
+  @override
+  _UserInfoState createState() => _UserInfoState();
+}
+
+class _UserInfoState extends State<UserInfo> {
   // Define user information constants
   static const String user = "Apichai MATT";
   static const String email = "apichaiyesfam123@gmail.com";
   static const String phone = "0-123-456-789";
   static const String location = "Bangkok, Thailand";
 
+  int _selectedIndex = 2;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+
+    switch (index) {
+      case 0:
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
+        break;
+      case 1:
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => FavoritePlace()));
+        break;
+      
+    }
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +44,7 @@ class UserInfo extends StatelessWidget {
           children: <Widget>[
             CircleAvatar(
               radius: 60,
-              backgroundImage: AssetImage('assets/Pang.jpg'),
+              backgroundImage: AssetImage('accest/images/Pang.jpg'),
             ),
             Text(
               user, // Use user constant
@@ -53,32 +78,22 @@ class UserInfo extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.blue, // Customize as needed
+        onTap: _onItemTapped,
+        items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/Home.jpg',
-              width: 23,
-              height: 20,
-            ),
-            label: '',
+            icon: Icon(Icons.home),
+            label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/Heart.jpg',
-              width: 23,
-              height: 20,
-            ),
-            label: '',
+            icon: Icon(Icons.favorite_border),
+            label: 'Favorite',
           ),
           BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/User.jpg',
-              width: 23,
-              height: 20,
-            ),
-            label: '',
+            icon: Icon(Icons.person),
+            label: 'Profile',
           ),
-          // Add more items if needed
         ],
       ),
     );

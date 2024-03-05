@@ -1,4 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:myproject_travel/pages/AboutGuide/guide_contact.dart';
+import 'package:myproject_travel/pages/AboutGuide/guide_list.dart';
 import 'package:myproject_travel/utils/styles.dart';
 
 class MenuMap extends StatelessWidget {
@@ -28,7 +31,16 @@ class MenuMap extends StatelessWidget {
               SizedBox(
                 width: 10,
               ),
-              Container(
+              GestureDetector( 
+                onTap: () {
+                        // Navigate to another page when the card is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => GuideListPage()),
+                        );
+                      },
+                      child: Container(
                 height: 25,
                 width: 150,
                 decoration: BoxDecoration(
@@ -41,6 +53,8 @@ class MenuMap extends StatelessWidget {
                   ),
                 ),
               ),
+              )
+              
             ],
           ),
         ),

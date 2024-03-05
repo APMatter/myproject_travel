@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
+  const Login ({super.key});
   @override
   LoginState createState() => LoginState();
 }
@@ -142,7 +143,7 @@ class LoginState extends State<Login> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image.asset(
-                            'assets/google.png', // Provide your image path here
+                            'accest/images/google.png', // Provide your image path here
                             height: 20,
                             width: 20,
                           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myproject_travel/pages/User_page/home_page.dart';
 import 'package:myproject_travel/utils/styles.dart';
 
 class CategoryCafe extends StatelessWidget {
@@ -15,14 +16,16 @@ class CategoryCafe extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Icon(Icons.arrow_back),
-                  SizedBox(
-                    width: small,
-                  ),
-                  Text(
-                    'Cafe',
-                    style: heading1,
-                  )
+                  GestureDetector(
+                      onTap: () {
+                        // Navigate to another page when the card is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => HomePage()),
+                        );
+                      },
+                      child: Label())
                 ],
               ),
               Padding(
@@ -37,6 +40,23 @@ class CategoryCafe extends StatelessWidget {
       )),
     );
   }
+}
+
+Widget Label() {
+  return Row(
+    children: [
+      Icon(
+        Icons.arrow_back,
+      ),
+      SizedBox(
+        width: small,
+      ),
+      Text(
+        'Cafe',
+        style: heading1,
+      )
+    ],
+  );
 }
 
 Widget Card() {
@@ -55,7 +75,7 @@ Widget Card() {
             height: 170,
             width: 170,
             child: Image(
-              image: AssetImage('accest/images/wat.jpeg'),
+              image: AssetImage('accest/images/cafe.jpg'),
               width: 100,
               height: 100,
               fit: BoxFit.cover,
@@ -68,7 +88,7 @@ Widget Card() {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Wat Rong Khun',
+                'Cafe',
                 style: heading3,
               ),
               SizedBox(

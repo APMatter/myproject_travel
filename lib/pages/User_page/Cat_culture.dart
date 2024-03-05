@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:myproject_travel/pages/User_page/home_page.dart';
 import 'package:myproject_travel/utils/styles.dart';
 
-class CategoryCulture extends StatelessWidget{
-  const CategoryCulture ({super.key});
-
-  
+class CategoryCulture extends StatelessWidget {
+  const CategoryCulture({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,14 +16,16 @@ class CategoryCulture extends StatelessWidget{
             children: [
               Row(
                 children: [
-                  Icon(Icons.arrow_back),
-                  SizedBox(
-                    width: small,
-                  ),
-                  Text(
-                    'Culture',
-                    style: heading1,
-                  )
+                  GestureDetector(
+                      onTap: () {
+                        // Navigate to another page when the card is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => HomePage()),
+                        );
+                      },
+                      child: Label())
                 ],
               ),
               Padding(
@@ -41,6 +42,22 @@ class CategoryCulture extends StatelessWidget{
   }
 }
 
+Widget Label() {
+  return Row(
+    children: [
+      Icon(
+        Icons.arrow_back,
+      ),
+      SizedBox(
+        width: small,
+      ),
+      Text(
+        'Culture',
+        style: heading1,
+      )
+    ],
+  );
+}
 
 Widget Card() {
   return Container(

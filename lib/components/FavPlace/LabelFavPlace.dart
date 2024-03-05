@@ -10,8 +10,8 @@ class LabelFavPlace extends StatelessWidget {
       
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [ 
-        Icon(Icons.arrow_back),
-        SizedBox(width: small,),
+      
+       
         Text('Favorite Places',style: heading1,),
       ],
       

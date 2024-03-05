@@ -11,6 +11,7 @@ var background = const Color(0xFFF8FaF8);
 var whiteTranper = Color.fromARGB(134, 255, 255, 255);
 var Black = const Color(0xFF000000);
 var white = const Color(0xFFFFFFFF);
+
 //Text Style
 TextStyle heading1 = GoogleFonts.poppins(
     fontWeight: FontWeight.w600, color: heading, fontSize: 20);
@@ -29,6 +30,8 @@ TextStyle p2 =
     GoogleFonts.poppins(color: text, fontSize: 12, fontWeight: FontWeight.w400);
 TextStyle p3 =
     GoogleFonts.poppins(color: text, fontSize: 10, fontWeight: FontWeight.w400);
+    TextStyle p4 =
+    GoogleFonts.poppins(color: Black, fontSize: 12, fontWeight: FontWeight.w400);
 
 TextStyle pLocation = GoogleFonts.poppins(
     fontSize: 10, fontWeight: FontWeight.w400, color: white);
