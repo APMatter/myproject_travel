@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myproject_travel/pages/User_page/home_page.dart';
 
 class Login extends StatefulWidget {
   const Login ({super.key});
@@ -160,7 +161,15 @@ class LoginState extends State<Login> {
                     ),
                     SizedBox(height: 40),
                     GestureDetector(
-                      onTap: _submitForm,
+                      //onTap: _submitForm,
+                      onTap: () {
+                        // Navigate to another page when the card is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => HomePage()),
+                        );
+                      },
                       child: Container(
                         height: 50,
                         margin: EdgeInsets.symmetric(horizontal: 70),
