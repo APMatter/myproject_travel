@@ -32,10 +32,7 @@ class _HomePageState extends State<HomePage> {
     case 1:
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => FavoritePlace()));
       break;
-    case 2:
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => GuideListPage()));
-      break;
-      case 3:
+      case 2:
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => UserInfo()));
       break;
     default:
