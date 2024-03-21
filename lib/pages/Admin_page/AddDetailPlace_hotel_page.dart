@@ -30,7 +30,7 @@ class AddDetailHotel extends StatelessWidget{
                   textStyle: heading4,
                   
                 ),
-                child: Text('save'),
+                child: Text('save',),
               ),),
             )
           ],

@@ -15,6 +15,7 @@ class AddPlaceMain extends StatelessWidget {
         child: Column( 
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [ 
+        
             Container( 
               padding: EdgeInsets.all(20),
               decoration: BoxDecoration( 
