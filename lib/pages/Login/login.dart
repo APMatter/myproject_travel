@@ -41,7 +41,7 @@ class LoginState extends State<Login> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      "Login",
+                      "Sign In",
                       style: TextStyle(
                         color: const Color.fromARGB(255, 0, 91, 166),
                         fontSize: 40,
@@ -179,7 +179,7 @@ class LoginState extends State<Login> {
                         ),
                         child: Center(
                           child: Text(
-                            "Login",
+                            "Sign In",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
